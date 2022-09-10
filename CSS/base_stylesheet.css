@@ -1,0 +1,138 @@
+:root {
+    font-family: 'SourceSansPro-Regular';
+    --pallet-1: #0F5257;
+    --pallet-2: #0B3142;
+    --pallet-3: #9C92A3;
+    --pallet-4: #C6B9CD; /* Logo Color*/
+    --pallet-5: #D6D3F0;
+    color: var(--pallet-2);
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Black';
+    src: url("/Fonts/SourceSansPro-Black.otf");
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Regular';
+    src: url("/Fonts/SourceSansPro-Regular.otf");
+}
+
+body{
+    margin:0;
+}
+
+h1{
+    font-family:'SourceSansPro-Black';
+}
+
+#map { 
+    border-radius: 15px;
+    height: 600px;
+    width: 100%;
+    margin: 5rem auto;
+}
+
+.baseContent{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.mainLogo{
+    object-fit:contain;
+    height: 7vh;
+    padding: 14px 16px;
+}
+
+.topNavbar{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--pallet-2);
+}
+
+.navUl{
+    display: inline-flex;
+    margin:0;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: var(--pallet-2);
+}
+
+.navUl:last-child{
+    margin-left: auto;
+}
+
+.navLi{
+    display: inline-block;
+    text-align: center;
+}
+
+.navLi a {
+    display: block;
+    color: var(--pallet-4);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family:'SourceSansPro-Black';
+}
+
+.navLi a:hover {
+    background-color: #111;
+}
+
+
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+}
+
+#testMap{
+    padding-top: 5vh;
+}
+
+#autocomplete{
+    font-size: larger;
+    width: 100%;
+    height: 5vh;
+    border-radius: 4px;
+    font-family:'SourceSansPro-Regular';
+    background-color: #0b314221;
+    border-radius: 10px;
+    border-color: var(--pallet-2);
+}
+
+#currentPageNavLi{
+    border-bottom: 3px solid var(--pallet-5);
+}
+
+.fa-right-to-bracket{
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    font-size: xx-large;
+    color: var(--pallet-2);
+}
+
+.enterAddButton{
+    background-color: #0b314221;
+    border-radius: 10px;
+    border-color: var(--pallet-2);
+    margin-left: 1rem;
+}
+
+.search{
+    display: inline-flex;
+    vertical-align: middle;
+    width: 100%;
+}

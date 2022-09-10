@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>JobsNearMe</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="auto-complete.js"></script>
+    <script src="https://kit.fontawesome.com/5bbed264e4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"/>
+
+
+    <!-- Got side tracked and implemented some CSS beforehand, I hope it isn't an issue -->
+    <link href="CSS/base_stylesheet.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <nav class="topNavbar">
+        <img src="Logo_Unfilled.png" class = "mainLogo">
+          <ul class="navUl">
+            <li class="navLi" id="currentPageNavLi"><a href=#>Map Search</a></li>
+            <li class="navLi"><a href=#>Remote Jobs</a></li>
+            <li class="navLi"><a href=#>Upload Jobs</a></li>
+            <li class="navLi"><a href=#>Profile</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <main>
+        <div id="baseContentDiv" class="baseContent">
+            <h1>Find jobs based on proximity!</h1>
+            <div class="search">
+                <input id="autocomplete" placeholder="Enter your address..." onFocus="geolocate()" type="text">
+                <button onclick="myFunction()" class="enterAddButton" id="searchbtn">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                </button>
+                <br>
+            </div>
+            <div id="map"></div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
+    <script src="main.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9qJrw3yJVpQN83UKG7NQMortC19caQk0&libraries=places&callback=initAutocomplete" async defer></script>
+  </body>
+
+  <footer id="footer">
+    <center>©2022 JobsNearMe, All Rights Reserved.</center>
+    
+  </footer> 
+
+</html>
