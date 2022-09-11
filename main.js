@@ -9,7 +9,24 @@ function getLocation() {
 }
   
 function showPosition(position) {
-    map.setView([position.coords.latitude, position.coords.longitude], 12);
+    var lat = position.coords.latitude;
+    var lang = position.coords.longitude;
+    var google_map_pos = new google.maps.LatLng( lat, lang );
+    var google_maps_geocoder = new google.maps.Geocoder();
+    google_maps_geocoder.geocode({ 'latLng': google_map_pos },
+        function( results, status ) {
+            var result = results[5].formatted_address;
+            var town = "Fargo, ND, USA";
+            if(result === town){
+                console.log("You are in Fargo, nice...")
+                map.setView([lat, lang], 12);
+            } else {
+                alert("JobsNearMe only support the Fargo community at this time!")
+                map.setView([46.877, -96.7898], 13);
+            }
+        }
+    );
+
 }
 
 window.addEventListener('load', getLocation());
@@ -46,6 +63,7 @@ function geocodeAddress() {
             value = value.replace(/[\(\)]/g,'').split(',');
             console.log(value);
             map.setView([value[0], value[1]], 14)
+
             var popup = L.popup()
                 .setLatLng([value[0], value[1]])
                 .setContent("Here it is!")
@@ -53,8 +71,7 @@ function geocodeAddress() {
         } else {
             alert("Geocode error: " + status);
         }
-    });
-}
+    });}
 
 function myFunction() {
     geocodeAddress();

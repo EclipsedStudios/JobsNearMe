@@ -28,23 +28,40 @@ h1{
 
 #map { 
     border-radius: 15px;
-    height: 600px;
+    height: 750px;
     width: 100%;
-    margin: 5rem auto;
+    margin-top: 10px;
+
 }
 
 .baseContent{
     margin: auto;
-    width: 50%;
+    width: 100%;
     padding: 10px;
     text-align: center;
 }
 
 .mainLogo{
     object-fit:contain;
-    height: 7vh;
+    height: 9vh;
     padding: 14px 16px;
 }
+
+.barLogo{
+    object-fit:contain;
+    height: 7.5vh;
+    padding: 14px 0px;
+    margin: 0;
+}
+
+.taglineLogo{
+    object-fit:contain;
+    height: 7.5vh;
+    padding: 14px 16px;
+    padding-left: 0px;
+}
+
+
 
 .topNavbar{
     display: flex;
