@@ -41,15 +41,11 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(map);
 
 
-L.popup()
-    .setLatLng([46.8459, -96.8570])
-    .setContent("CI Sport is hiring!")
-    .addTo (map);
+var marker = L.marker([46.8459, -96.8570]).addTo(map);
+var marker2 = L.marker([46.8395, -96.86098]).addTo(map);
+marker.bindPopup("<b>CI Sport</b><br>Screen Print Operator <br> $14/hr").openPopup();
+marker2.bindPopup("<b>Starbucks</b><br>Barista<br>$15/hr").openPopup();
 
-L.popup()
-    .setLatLng([46.8395, -96.86098])
-    .setContent("Starbucks is hiring!")
-    .addTo (map);
 
 // Handle conversion of text address to coordinates
 function geocodeAddress() {
